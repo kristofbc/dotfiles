@@ -1,4 +1,4 @@
-if [ -d $HOME/.oh-my-zsh ];
+if [ -d $HOME/.oh-my-zsh ]
 then
 	# shortcut to this dotfiles path is $ZSH
 	export ZSH=$HOME/.oh-my-zsh
