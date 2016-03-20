@@ -137,8 +137,18 @@ install_dotfiles () {
   done
 }
 
+finalize_installation() {
+	# Finalize the vim installation
+	info 'Finalizing installation'
+
+	vim +PluginInstall +qall
+
+	success 'Installation done'
+}
+
 setup_gitconfig
 install_dotfiles
+finalize_installation
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]

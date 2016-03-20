@@ -1,19 +1,9 @@
 " """"""
 " BUNDLE
 " """"""
-set nocompatible		" No compatibility for old vi
-filetype off			" Don't autodetect filetype
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" /start
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'ajh17/Spacegray.vim'
-Plugin 'chriskempson/base16-vim'
-Plugin 'scrooloose/nerdtree'
-"/end
-
-call vundle#end()
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 " """""""
 " GENERAL
