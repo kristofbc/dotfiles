@@ -22,4 +22,3 @@ brew 'macvim', args:['with-override-system-vim', 'with-lua', 'with-cscope', 'wit
 cask 'google-chrome'
 cask 'transmission'
 cask 'vlc'
-cask 'intellij-idea'
