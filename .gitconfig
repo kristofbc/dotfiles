@@ -1,0 +1,13 @@
+[include]
+	path = ~/.gitconfig.local # Different paths for username, credentials ...
+[alias]
+	st = status
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
