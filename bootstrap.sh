@@ -10,7 +10,7 @@ function testSyncDotfiles() {
 
 function syncDotfiles() {
 	rsync --exclude-from "bootstrap-exclude.txt" -avh --no-perms . ~;
-	source ~/.zshrc;
+	#source ~/.zshrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
