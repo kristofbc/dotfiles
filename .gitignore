@@ -9,3 +9,6 @@
 
 # Swap file
 *.swp
+
+# Ignore custom dotfile
+.localrc
