@@ -1,3 +1,7 @@
 export PATH="/usr/local/bin:$PATH"
 
 export EDITOR='vim'
+
+if [ "$TERM" != "screen-256color" ]; then
+  export TERM=screen-256color
+fi

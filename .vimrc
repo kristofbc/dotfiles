@@ -5,9 +5,10 @@
 " TABLE OF CONTENTS
 " """""""""""""""""
 " Base configurations ............... bconf
+" Plugins ........................... plugs
+" Styling configuration ............. sconf
 " Edition configurations ............ econf
 " Completion configurations ......... cconf
-" Plugins ........................... plugs
 
 
 " BASE CONFIGURATIONS (bconf) "
@@ -28,6 +29,26 @@ set wildmenu                   " Great command-line completion, use '<Tab>' to m
 set wildignorecase			   " Ignore case on completion
 
 
+" PLUGINS (bconf) "
+" """""""""""""""""
+" Plugins are managed via 'Plug' package manager: https://github.com/junegunn/vim-plug
+
+" Begin 'Plug'
+call plug#begin('~/.vim/plugged')
+
+" Plugin listing: less is more
+Plug 'leafgarland/typescript-vim'
+Plug 'ajmwagar/vim-dues'
+
+" End 'Plug'
+call plug#end()
+
+
+" STYLING CONFIGURATION (sconf) "
+" """""""""""""""""""""""""""""""
+colorscheme dues
+
+
 " EDITION CONFIGURATIONS (econf) "
 " """"""""""""""""""""""""""""""""
 
@@ -39,25 +60,11 @@ set number					   " Display page number, non relative
 set scrolloff=3 			   " Keep 3 lines below and above the cursor
 
 
-" COMPLETION CONFIGURATIONS (cconf)
-" """""""""""""""""""""""""""""""""
+" COMPLETION CONFIGURATIONS (cconf) "
+" """""""""""""""""""""""""""""""""""
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore=*.swp,*.bak
 set wildignore+=*.pyc,*.class,*.sln,*.Master,*.csproj,*.csproj.user,*.cache,*.dll,*.pdb,*.min.*
 set wildignore+=*/.git/**/*,*/.hg/**/*,*/.svn/**/*
 set wildignore+=*.pdf,*.psd
 set wildignore+=node_modules/*,bower_components/*
-
-
-" PLUGINS (bconf) "
-" """""""""""""""""
-" Plugins are managed via 'Plug' package manager: https://github.com/junegunn/vim-plug
-
-" Begin 'Plug'
-call plug#begin('~/.vim/plugged')
-
-" Plugin listing: less is more
-Plug 'leafgarland/typescript-vim'
-
-" End 'Plug'
-call plug#end()
