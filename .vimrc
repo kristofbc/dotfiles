@@ -39,14 +39,26 @@ call plug#begin('~/.vim/plugged')
 " Plugin listing: less is more
 Plug 'leafgarland/typescript-vim'
 Plug 'ajmwagar/vim-dues'
+Plug 'scrooloose/nerdtree'
 
 " End 'Plug'
 call plug#end()
+
+" PLUGINS CONFIGURATION (pconf) "
+" """""""""""""""""""""""""""""""
+" NERDTree
+" Toggle NT by <C-n>
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if only NT is remaining
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " STYLING CONFIGURATION (sconf) "
 " """""""""""""""""""""""""""""""
 colorscheme dues
+set cursorline
+set hlsearch
 
 
 " EDITION CONFIGURATIONS (econf) "
