@@ -18,6 +18,8 @@
 " highlighting, omni-completion and other useful settings.
 filetype plugin indent on
 syntax on
+let mapleader = ","
+let g:mapleader = ","
 
 " 'matchit.vim' is built-in so let's enable it!
 " Hit '%' on 'if' to jump to 'else'.
@@ -40,6 +42,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'leafgarland/typescript-vim'
 Plug 'ajmwagar/vim-dues'
 Plug 'scrooloose/nerdtree'
+Plug 'vimwiki/vimwiki'
 
 " End 'Plug'
 call plug#end()
@@ -56,20 +59,24 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " STYLING CONFIGURATION (sconf) "
 " """""""""""""""""""""""""""""""
-colorscheme dues
+set t_Co=256
+set background=dark " Setting dark mode
+colorscheme deus
 set cursorline
 set hlsearch
 
 
 " EDITION CONFIGURATIONS (econf) "
 " """"""""""""""""""""""""""""""""
-
 set autoindent                 " Minimal automatic indenting for any filetype.
 set backspace=indent,eol,start " Proper backspace behavior.
 set shiftwidth=4               " Shift spaces
 set tabstop=4                  " Tab spaces
 set number					   " Display page number, non relative
 set scrolloff=3 			   " Keep 3 lines below and above the cursor
+
+set splitbelow				   " New split are below the current one
+set splitright				   " New split are at the right of the current one
 
 
 " COMPLETION CONFIGURATIONS (cconf) "
