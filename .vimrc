@@ -43,6 +43,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ajmwagar/vim-dues'
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
+Plug 'Chiel92/vim-autoformat'
 
 " End 'Plug'
 call plug#end()
@@ -73,7 +74,7 @@ set backspace=indent,eol,start " Proper backspace behavior.
 set shiftwidth=4               " Shift spaces
 set tabstop=4                  " Tab spaces
 set number					   " Display page number, non relative
-set scrolloff=3 			   " Keep 3 lines below and above the cursor
+set scrolloff=3				   " Keep 3 lines below and above the cursor
 
 set splitbelow				   " New split are below the current one
 set splitright				   " New split are at the right of the current one
