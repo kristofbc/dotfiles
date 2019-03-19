@@ -9,6 +9,7 @@
 " Styling configuration ............. sconf
 " Edition configurations ............ econf
 " Completion configurations ......... cconf
+" Languages configurations .......... lconf
 
 
 " BASE CONFIGURATIONS (bconf) "
@@ -45,6 +46,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
 Plug 'Chiel92/vim-autoformat'
 
+
 " End 'Plug'
 call plug#end()
 
@@ -65,14 +67,18 @@ set background=dark " Setting dark mode
 colorscheme deus
 set cursorline
 set hlsearch
+set listchars=tab:>-,trail:-,nbsp:_ 
+set list
 
 
 " EDITION CONFIGURATIONS (econf) "
 " """"""""""""""""""""""""""""""""
+"set smartindent                " Do smart autoindenting when starting a new line
 set autoindent                 " Minimal automatic indenting for any filetype.
 set backspace=indent,eol,start " Proper backspace behavior.
-set shiftwidth=4               " Shift spaces
 set tabstop=4                  " Tab spaces
+set shiftwidth=4               " Shift spaces
+set expandtab                  " When using <Tab>, put spaces instead of a <tab> character
 set number					   " Display page number, non relative
 set scrolloff=3				   " Keep 3 lines below and above the cursor
 
@@ -88,3 +94,8 @@ set wildignore+=*.pyc,*.class,*.sln,*.Master,*.csproj,*.csproj.user,*.cache,*.dl
 set wildignore+=*/.git/**/*,*/.hg/**/*,*/.svn/**/*
 set wildignore+=*.pdf,*.psd
 set wildignore+=node_modules/*,bower_components/*
+"
+" LANGUAGES CONFIGURATION (lconf) "
+" """""""""""""""""""""""""""""""""""
+"au FileType python set tabstop=4 | set softtabstop=4 | set shiftwidth=4 | set textwidth=79 | set expandtab | set autoindent | set fileformat=unix
+
