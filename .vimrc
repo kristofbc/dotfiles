@@ -40,12 +40,16 @@ set wildignorecase			   " Ignore case on completion
 call plug#begin('~/.vim/plugged')
 
 " Plugin listing: less is more
-Plug 'leafgarland/typescript-vim'
 Plug 'ajmwagar/vim-dues'
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
 Plug 'Chiel92/vim-autoformat'
-
+" Need to compile YCM
+" cd ~/.vim/plugged/YouCompleteMe
+" git submodule update --init --recursive
+" ./install.py --clang-completer
+Plug 'Valloric/YouCompleteMe'
+Plug 'majutsushi/tagbar'
 
 " End 'Plug'
 call plug#end()
@@ -58,6 +62,10 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Close vim if only NT is remaining
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Tagbar
+let g:tagbar_previewwin_pos = "belowleft"
+nnoremap <silent> <C-K><C-T> :TagbarToggle<CR>
 
 
 " STYLING CONFIGURATION (sconf) "
