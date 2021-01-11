@@ -50,6 +50,7 @@ Plug 'Chiel92/vim-autoformat'
 " ./install.py --clang-completer
 Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " End 'Plug'
 call plug#end()
@@ -59,13 +60,22 @@ call plug#end()
 " NERDTree
 " Toggle NT by <C-n>
 map <C-n> :NERDTreeToggle<CR>
+map <leader>r :NERDTreeFind<cr>
 
 " Close vim if only NT is remaining
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 " Tagbar
 let g:tagbar_previewwin_pos = "belowleft"
 nnoremap <silent> <C-K><C-T> :TagbarToggle<CR>
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 
 " STYLING CONFIGURATION (sconf) "
